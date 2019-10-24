@@ -1,0 +1,9 @@
+CREATE DATABASE etec3;
+
+use etec3;
+
+CREATE TABLE tarefa(
+    tarefa_id int NOT NULL AUTO_INCREMENT,
+    tarefa_nome varchar(255) NOT NULL,
+    PRIMARY KEY (tarefa_id)
+);

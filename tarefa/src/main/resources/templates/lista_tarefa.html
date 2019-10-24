@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Lista Tarefa</title>
+</head>
+<body>
+
+<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nome Terefa</th>		
+				<th>Editar</th>				
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="tarefa : ${tarefas}">				
+				<td> <span th:text="${tarefa.id}"></span></td>
+				<td> <span th:text="${tarefa.nomeTarefa}"></span></td>
+				<td><button type="button" th:onclick="'submitEdit(\'' + ${tarefa.id} + '\');'">Editar</button></td>							
+			</tr>
+		</tbody>
+		
+</table>
+
+
+
+	<script type="text/javascript">
+	function submitEdit(x) {
+		alert(x);
+		window.location.assign("editar?id=" + x);	
+	}
+	</script>
+
+</body>
+</html>

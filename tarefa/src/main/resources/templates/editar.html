@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<title>Gerenciador de Tarefas</title>
+	</head>
+	
+	<body>
+		<form action="salvatarefa" method="get">		
+  			Nome tarefa:  <input type="text" th:field="${tarefa.nomeTarefa}" name="nomeTarefa" /><br>
+  			 <input type="hidden" th:field="${tarefa.id}" name="id" /><br>
+  			<button type="submit">Atualizar</button>  			
+		</form>
+	</body>
+
+</hmtl>
